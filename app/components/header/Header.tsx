@@ -39,7 +39,7 @@ export default function Header() {
             height={100}
             alt="logo de adrec"
             src={Logo}
-            className={`transition-all duration-300 ease-in-out ${
+            className={`transition-all duration-300 rounded-full ease-in-out ${
               isScrolled ? "w-6 h-6" : "w-8 h-8"
             }`}
           />

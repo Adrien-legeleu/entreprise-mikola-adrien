@@ -12,8 +12,12 @@ const config: Config = {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"], // Définir Montserrat comme police par défaut
       },
+      textColor: {
+        "indigo-purple": "#374151",
+      },
       colors: {
         background: "hsl(var(--background))",
+        "cream-white": "#FAFAFA",
         foreground: "hsl(var(--foreground))",
         card: {
           DEFAULT: "hsl(var(--card))",
