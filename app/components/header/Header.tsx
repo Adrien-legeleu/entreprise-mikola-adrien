@@ -27,7 +27,7 @@ export default function Header() {
           margin: isScrolled ? "24px auto" : "none",
           transition: "width 0.4s ease-in-out, margin-top 0.4s ease-in-out",
         }}
-        className={`px-8 py-2 flex items-center justify-between rounded-full ${
+        className={`px-8 py-3 flex items-center justify-between rounded-full ${
           isScrolled
             ? "shadow-lg backdrop-blur-lg bg-white/60"
             : "bg-transparent"
@@ -52,7 +52,7 @@ export default function Header() {
         </ul>
         <div className="flex items-center gap-2">
           <ModeToggle />
-          <Button>Contactez-nous</Button>
+          <Button className="rounded-xl">Contactez-nous</Button>
         </div>
       </div>
     </div>
