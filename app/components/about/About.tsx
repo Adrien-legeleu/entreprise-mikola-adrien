@@ -62,7 +62,7 @@ export default function About() {
                   style={{ top: item.id === 1 ? "10px" : "-5px" }}
                 />
               </div>
-              <h3 className="text-xl text-neutral-100 text-center mb-2 font-semibold">
+              <h3 className="text-2xl text-neutral-100 text-center mb-2 font-semibold">
                 {item.title}
               </h3>
               <p className="text-neutral-400 text-center">{item.description}</p>

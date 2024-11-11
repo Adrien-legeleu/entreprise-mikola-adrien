@@ -52,7 +52,9 @@ export default function Header() {
         </ul>
         <div className="flex items-center gap-2">
           <ModeToggle />
-          <Button className="rounded-xl">Contactez-nous</Button>
+          <Button className="rounded-lg" variant="outline">
+            Contactez-nous
+          </Button>
         </div>
       </div>
     </div>

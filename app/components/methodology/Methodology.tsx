@@ -1,12 +1,16 @@
 "use client";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
 import { IconArrowRight } from "@tabler/icons-react";
 import Image from "next/image";
-import { useEffect, useState } from "react"; // Importation de useState et useEffect
-
 import metho1 from "@/public/image/methodology (1).png";
 import metho2 from "@/public/image/methodology (2).png";
 import metho3 from "@/public/image/methodology (3).png";
+import metho4 from "@/public/image/methodology (4).png";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const dataMethods = [
   {
@@ -27,55 +31,68 @@ const dataMethods = [
     id: 3,
     title: "Développement agile",
     description:
-      "Codage de votre application web en sprints d’une semaine, permettant des ajustements flexibles basés sur des tests en conditions réelles. A la fin de chaque sprint une revue est organisée ensemble.",
-    img: metho3,
+      "Codage de votre application web en sprints d&rsquo;une semaine, permettant des ajustements flexibles basés sur des tests en conditions réelles. A la fin de chaque sprint une revue est organisée ensemble.",
+    img: metho1,
   },
   {
     id: 4,
     title: "Tests & améliorations",
     description:
       "Assurer la qualité et la performance de l'application par des tests rigoureux en conditions réelles, en prenant en compte des retours pour des ajustements.",
-    img: metho1,
+    img: metho3,
+  },
+  {
+    id: 5,
+    title: "Itérations",
+    description:
+      "Mettre l'application en ligne et effectuer des itérations basées sur les retours, les datas et les évolutions du marché. Retour à l'étape 1 pour focus une autre problématique !",
+    img: metho4,
   },
 ];
 
 export default function Methodology() {
-  // Suivi de la position du scroll
-  const [scrollY, setScrollY] = useState(0);
+  const sectionsRef = useRef<HTMLDivElement[]>([]);
 
-  // Effet pour écouter l'événement de scroll
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY); // Met à jour la position du scroll
-    };
+    sectionsRef.current.forEach((section, i) => {
+      gsap.fromTo(
+        section,
+        { width: "92%" },
+        {
+          width: "100%",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "bottom 60%",
+            scrub: 3,
 
-    window.addEventListener("scroll", handleScroll); // Ajout de l'événement
-    return () => {
-      window.removeEventListener("scroll", handleScroll); // Nettoyage
-    };
+            id: `section-${i + 1}`,
+          },
+        }
+      );
+    });
   }, []);
 
   return (
     <div>
-      <h2 className="text-4xl font-bold tracking-wide space-y-1 text-center">
-        <span className="inline-block"> Notre méthodologie</span> <br />{" "}
+      <h2 className="text-4xl font-bold tracking-wide  space-y-1 text-center">
+        <span className="inline-block text-indigo-purple">
+          Notre méthodologie
+        </span>{" "}
+        <br />{" "}
         <span className="bg-[#3F2A78] p-3 inline-block rounded-lg -rotate-3 text-neutral-50">
           en application web
         </span>
       </h2>
-      <div className="flex flex-col mt-20 gap-10 px-5">
-        {dataMethods.map((method) => {
-          // Calcul de l'échelle en fonction du défilement
-          const scale = 1 + (scrollY / 1000) * (method.id % 2 === 0 ? 1 : 0.5); // Modifie le facteur selon la direction du scroll
-
+      <div className="flex flex-col justify-center items-center mt-20 gap-2 px-2">
+        {dataMethods.map((method, index) => {
           return (
             <div
-              key={`methodologie de adrec étape : ${method.id}`}
-              className="relative w-full px-24 py-20 rounded-3xl bg-[#151D53] grid grid-cols-2 gap-28"
-              style={{
-                transform: `scale(${scale})`, // Applique le scale dynamique
-                transition: "transform 0.1s ease-out", // Animation douce
+              key={`methodologie-de-adrec-${method.id}`}
+              ref={(el) => {
+                if (el) sectionsRef.current[index] = el;
               }}
+              className="relative w-full px-24 py-20 rounded-3xl bg-[#151D53] grid grid-cols-2 gap-28"
             >
               <div
                 className={`relative space-y-2 ${
@@ -104,7 +121,11 @@ export default function Methodology() {
                   method.id % 2 === 0 ? "col-start-1 row-start-1" : ""
                 }`}
               >
-                <span className="text-white font-bold relative left-5">
+                <span
+                  className={`text-white font-bold relative left-5 ${
+                    method.id === 3 ? "inline-block" : "hidden"
+                  }`}
+                >
                   Ticket
                 </span>
                 <Image
