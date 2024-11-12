@@ -5,9 +5,9 @@ import { projectsData } from "@/data/projects-data";
 export default function Project() {
   return (
     <div className="space-y-12 w-full px-10 py-28 max-w-[1400px] mx-auto">
-      <h2 className="text-4xl font-bold space-x-2  text-center text-indigo-purple">
+      <h2 className="text-4xl font-bold space-x-2 dark:text-indigo-light text-center text-indigo-purple">
         <span className="inline-block">Tous nos</span>
-        <span className="bg-[#3F2A78] p-3 inline-block rounded-lg rotate-6 text-neutral-50">
+        <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] dark:text-black p-3 inline-block rounded-lg rotate-6 text-neutral-50">
           Projet
         </span>
       </h2>

@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        430: "430px",
+      },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
       },
