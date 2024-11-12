@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
@@ -31,7 +31,7 @@ const dataMethods = [
     id: 3,
     title: "Développement agile",
     description:
-      "Codage de votre application web en sprints d&rsquo;une semaine, permettant des ajustements flexibles basés sur des tests en conditions réelles. A la fin de chaque sprint une revue est organisée ensemble.",
+      "Codage de votre application web en sprints d'une semaine, permettant des ajustements flexibles basés sur des tests en conditions réelles. A la fin de chaque sprint une revue est organisée ensemble.",
     img: metho1,
   },
   {
@@ -49,8 +49,17 @@ const dataMethods = [
     img: metho4,
   },
 ];
+interface MEthodPagePRops {
+  handleDivMouse: (e: any) => void;
+  handleIsMouseNotVisible: () => void;
+  handleIsMouseVisible: () => void;
+}
 
-export default function Methodology() {
+export default function Methodology({
+  handleIsMouseNotVisible,
+  handleIsMouseVisible,
+  handleDivMouse,
+}: MEthodPagePRops) {
   const sectionsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
@@ -84,7 +93,12 @@ export default function Methodology() {
           en application web
         </span>
       </h2>
-      <div className="flex flex-col justify-center items-center mt-20 gap-2 px-2">
+      <div
+        className="flex flex-col justify-center items-center mt-20 gap-2 px-2"
+        onMouseEnter={handleIsMouseVisible}
+        onMouseLeave={handleIsMouseNotVisible}
+        onMouseMove={handleDivMouse}
+      >
         {dataMethods.map((method, index) => {
           return (
             <div
@@ -108,7 +122,7 @@ export default function Methodology() {
                 <h4 className="text-white text-3xl font-medium tracking-wide">
                   {method.title}
                 </h4>
-                <p className="max-w-md text-neutral-200 leading-relaxed">
+                <p className="max-w-md text-neutral-200 leading-relaxed w-[400px]">
                   {method.description}
                 </p>
                 <Button variant="outline">

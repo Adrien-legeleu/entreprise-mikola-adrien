@@ -33,19 +33,19 @@ const dataAbout = [
 
 export default function About() {
   return (
-    <div className="bg-gradient-to-b from-neutral-100 to-white z-10 relative pb-32">
+    <div className="bg-gradient-to-b from-neutral-100 to-white dark:from-neutral-800 dark:to-neutral-950 z-10 relative pb-32">
       <motion.div
         initial={{ width: "70%", height: "auto" }}
         whileInView={{ width: "98%", height: "auto" }}
         viewport={{ amount: 0.01 }}
         transition={{ duration: 0.7, ease: "easeInOut" }}
-        className="bg-[#374151] rounded-3xl p-8 mx-auto overflow-hidden space-y-20"
+        className="bg-[#374151] dark:bg-[#CBD5E1] rounded-3xl p-8 mx-auto overflow-hidden space-y-20"
       >
         <div className="space-y-2">
-          <h2 className="text-4xl text-neutral-100 text-center font-bold tracking-wide">
+          <h2 className="text-4xl text-neutral-100 dark:text-neutral-700 text-center font-bold tracking-wide">
             Nous sommes là pour vous.
           </h2>
-          <p className="text-sm text-neutral-400 text-center tracking-wide">
+          <p className="text-sm text-neutral-400 dark:text-neutral-500 text-center tracking-wide">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
         </div>
@@ -62,10 +62,12 @@ export default function About() {
                   style={{ top: item.id === 1 ? "10px" : "-5px" }}
                 />
               </div>
-              <h3 className="text-2xl text-neutral-100 text-center mb-2 font-semibold">
+              <h3 className="text-2xl text-neutral-100 dark:text-neutral-700 text-center mb-2 font-semibold">
                 {item.title}
               </h3>
-              <p className="text-neutral-400 text-center">{item.description}</p>
+              <p className="text-neutral-400 dark:text-neutral-500  text-center">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

@@ -29,7 +29,7 @@ export default function Header() {
         }}
         className={`px-8 py-3 flex items-center justify-between rounded-full ${
           isScrolled
-            ? "shadow-lg backdrop-blur-lg bg-white/60"
+            ? "shadow-lg backdrop-blur-lg bg-white/60 dark:bg-black/60"
             : "bg-transparent"
         }`}
       >
@@ -45,7 +45,7 @@ export default function Header() {
           />
           Adrec
         </h2>
-        <ul className="flex gap-8 text-sm  capitalize text-[#374151] font-semibold items-center">
+        <ul className="flex gap-8 text-sm  capitalize text-indigo-purple dark:text-indigo-light font-semibold items-center">
           <li>about</li>
           <li>projects</li>
           <li>contact</li>
