@@ -27,7 +27,7 @@ export default function DrawerDemoTechno({ techno, idx }: DrawerProps) {
       <DrawerTrigger asChild>
         <li
           key={idx}
-          className="flex gap-4 items-center p-4 rounded-lg hover:bg-blue-50 duration-300 ease-in-out group cursor-pointer"
+          className="flex gap-4 relative items-center p-4 rounded-lg hover:bg-blue-50 duration-300 ease-in-out group cursor-pointer"
         >
           <div className="rounded-lg p-2 w-12 h-12 bg-blue-200  dark:bg-[#1E293B5e] flex items-center justify-center">
             <span>{techno.icon}</span>
@@ -38,7 +38,7 @@ export default function DrawerDemoTechno({ techno, idx }: DrawerProps) {
             </h4>
             <p className="text-sm">{techno.desc}</p>
           </div>
-          <div className="group-hover:top-0 group-hover:opacity-100 top-10 opacity-0 relative flex items-center justify-end duration-300 ease-in-out">
+          <div className="group-hover:top-1/2 absolute right-4  -translate-y-1/2 group-hover:opacity-100 top-full opacity-0  flex items-center justify-end duration-300 ease-in-out">
             <IconArrowRight className="text-indigo-purple dark:text-indigo-light" />
           </div>
         </li>
