@@ -36,7 +36,7 @@ const dataFAQ = [
 
 export default function FAQ() {
   return (
-    <div className="w-2/3 mx-auto py-20 space-y-10">
+    <div className="w-full px-20 mx-auto py-20 space-y-20">
       <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center ">
         <span className="inline-block text-indigo-purple dark:text-indigo-light">
           Des questions ?
@@ -46,13 +46,15 @@ export default function FAQ() {
           La F.A.Q
         </span>
       </h2>
-      <Accordion type="single" collapsible className="w-full space-y-5">
+      <Accordion type="single" collapsible className="w-full space-y-10">
         {dataFAQ.map((item, index) => (
           <AccordionItem value={`item-${index + 1}`} key={index}>
-            <AccordionTrigger className="text-xl text-indigo-purple dark:text-indigo-light">
+            <AccordionTrigger className="text-2xl font-bold text-indigo-purple dark:text-indigo-light">
               {item.question}
             </AccordionTrigger>
-            <AccordionContent>{item.answer}</AccordionContent>
+            <AccordionContent className="leading-relaxed text-base pr-10 tracking-wider">
+              {item.answer}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
