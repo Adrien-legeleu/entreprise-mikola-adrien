@@ -7,6 +7,7 @@ import Methodology from "./components/methodology/Methodology";
 import Project from "./components/project/Project";
 import Technologies from "./components/techno/Technologies";
 import FAQ from "./components/faq/FAQ";
+import Contact from "./components/contact/Contact";
 
 export default function Home() {
   const [left, setLeft] = useState();
@@ -37,6 +38,7 @@ export default function Home() {
       <Project />
       <Technologies />
       <FAQ />
+      <Contact />
       <div className="h-[300vh] w-10 z-0  border-dashed  border-[1px] border-r-black/20   border-l-black/50 absolute top-32 left-0  -translate-y-1/2 -rotate-45" />
       <div className="h-[300vh] w-10 z-0 border-dashed  border-[1px] border-l-black/20   border-r-black/50 absolute top-32 left-1/2  -translate-y-1/2 -rotate-45" />
       {isCursorVisible && (

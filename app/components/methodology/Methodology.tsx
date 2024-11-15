@@ -73,7 +73,7 @@ export default function Methodology({
             trigger: section,
             start: "top 80%",
             end: "bottom 60%",
-            scrub: 3,
+            scrub: 1,
 
             id: `section-${i + 1}`,
           },
