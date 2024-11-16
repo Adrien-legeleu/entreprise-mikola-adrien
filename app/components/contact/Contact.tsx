@@ -1,10 +1,55 @@
+"use client";
+
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "react-toastify";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    last_name: "",
+    email: "",
+    tel: "",
+    text: "",
+  });
+
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success("Votre message a été envoyé avec succès !");
+        setFormData({
+          name: "",
+          last_name: "",
+          email: "",
+          tel: "",
+          text: "",
+        });
+      } else {
+        toast.error("Une erreur est survenue, veuillez réessayer.");
+      }
+    } catch (error) {
+      toast.error("Erreur d'envoi : " + error);
+    }
+  };
   return (
     <div className="space-y-20 p-20">
       <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
@@ -16,39 +61,66 @@ export default function Contact() {
           Contactez-nous !
         </span>
       </h2>
-      <Card>
-        <CardContent>
-          <div className="grid grid-cols-2 gap-10">
-            <div>
-              <Label htmlFor="name">Nom</Label>
-              <Input placeholder="Nom" id="name" name="name" type="text" />
-            </div>
-            <div>
-              <Label htmlFor="last-name">Prénom</Label>
-              <Input
-                placeholder="Nom"
-                id="last-name"
-                name="last-name"
-                type="text"
+      <form onSubmit={handleSubmit}>
+        <Card className="p-12 space-y-12">
+          <CardContent>
+            <div className="grid grid-cols-2 gap-5">
+              <div>
+                <Label htmlFor="name">Nom</Label>
+                <Input
+                  placeholder="Nom"
+                  id="name"
+                  name="name"
+                  type="text"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                <Label htmlFor="last_name">Prénom</Label>
+                <Input
+                  placeholder="Nom"
+                  id="last_name"
+                  name="last_name"
+                  type="text"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                <Label htmlFor="email">Email</Label>
+                <Input
+                  placeholder="Email"
+                  id="email"
+                  name="email"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                <Label htmlFor="tel">Téléphone</Label>
+                <Input
+                  placeholder="Téléphone"
+                  id="tel"
+                  name="tel"
+                  type="tel"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <Textarea
+                placeholder="Entrez votre message ici."
+                className="min-h-60 col-span-2"
+                name="text"
+                id="text"
+                onChange={handleInputChange}
               />
             </div>
-            <div>
-              <Label htmlFor="email">Email</Label>
-              <Input placeholder="Email" id="email" name="email" />
-            </div>
-            <div>
-              <Label htmlFor="tel">Téléphone</Label>
-              <Input placeholder="Téléphone" id="tel" name="tel" type="tel" />
-            </div>
-          </div>
-        </CardContent>
-        <CardFooter className="flex justify-between">
-          <Button type="button" variant="outline">
-            Cancel
-          </Button>
-          <Button type="submit">Envooyer</Button>
-        </CardFooter>
-      </Card>
+          </CardContent>
+          <CardFooter className="flex justify-end gap-5">
+            <Button type="button" variant="outline">
+              Cancel
+            </Button>
+            <Button type="submit">Envoyer</Button>
+          </CardFooter>
+        </Card>
+      </form>
     </div>
   );
 }

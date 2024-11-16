@@ -8,6 +8,7 @@ import Project from "./components/project/Project";
 import Technologies from "./components/techno/Technologies";
 import FAQ from "./components/faq/FAQ";
 import Contact from "./components/contact/Contact";
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
   const [left, setLeft] = useState();
@@ -66,6 +67,7 @@ export default function Home() {
           }}
         />
       )}
+      <Footer />
     </div>
   );
 }
