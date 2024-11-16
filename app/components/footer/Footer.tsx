@@ -18,7 +18,7 @@ export default function Footer() {
               height={100}
               alt="logo de adrec"
               src={Logo}
-              className="w-12 h-12"
+              className="w-12 h-12 rounded-full"
             />
             Adrec
           </h2>
@@ -28,19 +28,30 @@ export default function Footer() {
           </i>
         </div>
         <div className="grid grid-cols-3 text-sm">
-          <ul>
-            <Link href="#about">A propos</Link>
-            <Link href="#projects">Nos projets</Link>
-            <Link href="#contact">Contactez-nous</Link>
-          </ul>
-          <ul>
+          <ul className="space-y-2">
             <li>adrienlegeleu@gmail.com</li>
             <li>07 68 73 52 38</li>
           </ul>
-          <ul>
-            <li>© 2024 Adrec. Tous droits réservés.</li>
-            <Link href="">mentions légales</Link>
-            <Link href="">politique de confidentialité</Link>
+          <ul className="space-y-2">
+            <li className="hover:underline">
+              <Link href="#about">A propos</Link>
+            </li>
+            <li className="hover:underline">
+              <Link href="#projects">Nos projets</Link>
+            </li>
+            <li className="hover:underline">
+              <Link href="#contact">Contactez-nous</Link>
+            </li>
+          </ul>
+          <ul className="space-y-2">
+            <li className="hover:underline">
+              {" "}
+              <Link href="">mentions légales</Link>
+            </li>
+            <li className="hover:underline">
+              <Link href="">politique de confidentialité</Link>
+            </li>
+            <li className="text-xs">© 2024 Adrec. Tous droits réservés.</li>
           </ul>
         </div>
       </div>
