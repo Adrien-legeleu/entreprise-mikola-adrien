@@ -33,7 +33,10 @@ const dataAbout = [
 
 export default function About() {
   return (
-    <div className="bg-gradient-to-b from-neutral-100 to-white dark:from-neutral-800 dark:to-neutral-950 z-10 relative pb-32">
+    <div
+      className="bg-gradient-to-b from-neutral-100 to-white dark:from-neutral-800 dark:to-neutral-950 z-10 relative pb-32"
+      id="about"
+    >
       <motion.div
         initial={{ width: "70%", height: "auto" }}
         whileInView={{ width: "98%", height: "auto" }}

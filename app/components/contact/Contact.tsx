@@ -51,7 +51,7 @@ export default function Contact() {
     }
   };
   return (
-    <div className="space-y-20 p-20">
+    <div className="space-y-20 sm:p-20 py-20  430:px-8 px-4">
       <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
         <span className="inline-block text-indigo-purple dark:text-indigo-light">
           Vous êtes intéressées ?
@@ -61,10 +61,10 @@ export default function Contact() {
           Contactez-nous !
         </span>
       </h2>
-      <form onSubmit={handleSubmit}>
-        <Card className="p-12 space-y-12">
+      <form onSubmit={handleSubmit} id="contact">
+        <Card className="md:p-12 430:p-8 p-4 space-y-12">
           <CardContent>
-            <div className="grid grid-cols-2 gap-5">
+            <div className="sm:grid sm:grid-cols-2 flex flex-col gap-5">
               <div>
                 <Label htmlFor="name">Nom</Label>
                 <Input

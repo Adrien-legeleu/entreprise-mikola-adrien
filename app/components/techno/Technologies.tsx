@@ -69,7 +69,7 @@ const dataTechno = [
 
 export default function Technologies() {
   return (
-    <div className="h-screen w-full grid grid-cols-2 gap-32 px-16">
+    <div className="lg:h-screen h-full w-full lg:grid lg:grid-cols-2 flex flex-col  max-lg:items-center lg:gap-32 gap-12 sm:px-16 px-8">
       <div className="space-y-10">
         <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
           <span className="inline-block text-indigo-purple dark:text-indigo-light">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Logo from "@/public/logo/logo.png";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
+import Link from "next/link";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -46,15 +47,23 @@ export default function Header() {
           Adrec
         </h2>
         <ul className="md:flex hidden  gap-8 text-sm  capitalize text-indigo-purple dark:text-indigo-light font-semibold items-center">
-          <li>about</li>
-          <li>projects</li>
-          <li>contact</li>
+          <li>
+            <Link href="#about">A propos</Link>
+          </li>
+          <li>
+            <Link href="#projects">Nos projets</Link>
+          </li>
+          <li>
+            <Link href="#method">Notre méthode</Link>
+          </li>
         </ul>
         <div className="flex items-center gap-2">
           <ModeToggle />
-          <Button className="rounded-lg" variant="outline">
-            Contactez-nous
-          </Button>
+          <Link href="#contact">
+            <Button className="rounded-lg" variant="outline">
+              Contactez-nous
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

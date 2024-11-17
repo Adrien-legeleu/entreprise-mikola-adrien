@@ -7,12 +7,12 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="p-10">
-      <div className="h-[40rem] flex items-center justify-center">
+      <div className="h-full w-full py-10 max-sm:hidden flex items-center justify-center">
         <TextHoverEffect text="ADREC" />
       </div>
-      <div className="grid grid-cols-40/60  gap-4 items-center justify-center">
-        <div className="space-y-5 max-w-sm">
-          <h2 className="flex items-center text-3xl gap-2  font-medium tracking-wider">
+      <div className="md:grid md:grid-cols-40/60 flex flex-col  md:gap-4 gap-8 items-center justify-center">
+        <div className="space-y-5 max-w-sm flex flex-col md:items-baseline items-center">
+          <h2 className="flex items-center text-3xl gap-2 text-center  font-medium tracking-wider">
             <Image
               width={100}
               height={100}
@@ -22,15 +22,21 @@ export default function Footer() {
             />
             Adrec
           </h2>
-          <i className="text-lg text-muted-foreground inline-block">
+          <i className="text-lg md:text-left text-center text-muted-foreground inline-block">
             "Adrec, votre partenaire pour des solutions web sur-mesure et
             innovantes."
           </i>
         </div>
-        <div className="grid grid-cols-3 text-sm">
+        <div className="sm:grid sm:grid-cols-3 flex flex-col max-sm:gap-5 lg:text-sm  text-xs md:text-left text-center gap-2">
           <ul className="space-y-2">
-            <li>adrienlegeleu@gmail.com</li>
-            <li>07 68 73 52 38</li>
+            <li className="hover:underline">
+              {" "}
+              <Link href="">mentions légales</Link>
+            </li>
+            <li className="hover:underline">
+              <Link href="">politique de confidentialité</Link>
+            </li>
+            <li className="text-xs">© 2024 Adrec. Tous droits réservés.</li>
           </ul>
           <ul className="space-y-2">
             <li className="hover:underline">
@@ -42,16 +48,13 @@ export default function Footer() {
             <li className="hover:underline">
               <Link href="#contact">Contactez-nous</Link>
             </li>
+            <li className="hover:underline">
+              <Link href="#method">Notre méthode</Link>
+            </li>
           </ul>
           <ul className="space-y-2">
-            <li className="hover:underline">
-              {" "}
-              <Link href="">mentions légales</Link>
-            </li>
-            <li className="hover:underline">
-              <Link href="">politique de confidentialité</Link>
-            </li>
-            <li className="text-xs">© 2024 Adrec. Tous droits réservés.</li>
+            <li>adrienlegeleu@gmail.com</li>
+            <li>07 68 73 52 38</li>
           </ul>
         </div>
       </div>

@@ -83,7 +83,7 @@ export default function Methodology({
   }, []);
 
   return (
-    <div>
+    <div id="method">
       <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
         <span className="inline-block text-indigo-purple dark:text-indigo-light">
           Notre méthodologie

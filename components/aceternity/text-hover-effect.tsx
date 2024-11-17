@@ -1,21 +1,19 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
-import { motion } from "framer-motion";
 
 export const TextHoverEffect = ({
   text,
-  duration,
+  duration = 0.5,
 }: {
   text: string;
   duration?: number;
 }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
-  const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
 
   useEffect(() => {
-    if (svgRef.current && cursor.x !== null && cursor.y !== null) {
+    if (svgRef.current) {
       const svgRect = svgRef.current.getBoundingClientRect();
       const cxPercentage = ((cursor.x - svgRect.left) / svgRect.width) * 100;
       const cyPercentage = ((cursor.y - svgRect.top) / svgRect.height) * 100;
@@ -33,92 +31,73 @@ export const TextHoverEffect = ({
       height="100%"
       viewBox="0 0 300 100"
       xmlns="http://www.w3.org/2000/svg"
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       onMouseMove={(e) => setCursor({ x: e.clientX, y: e.clientY })}
       className="select-none"
     >
       <defs>
-        {/* Light Mode Gradient */}
+        {/* Gradients */}
         <linearGradient id="textGradientLight" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#5A67D8" />
           <stop offset="33%" stopColor="#667EEA" />
           <stop offset="66%" stopColor="#EBF4FF" />
           <stop offset="100%" stopColor="#4A5568" />
         </linearGradient>
-
-        {/* Dark Mode Gradient */}
         <linearGradient id="textGradientDark" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stopColor="#A0AEC0" />
-          <stop offset="33%" stopColor="#718096" />
-          <stop offset="66%" stopColor="#4A5568" />
-          <stop offset="100%" stopColor="#1A202C" />
+          <stop offset="0%" stopColor="#4A5568" />
+          <stop offset="100%" stopColor="#2D3748" />
         </linearGradient>
 
         {/* Reveal Mask */}
-        <motion.radialGradient
+        <radialGradient
           id="revealMask"
-          gradientUnits="userSpaceOnUse"
-          r="20%"
-          animate={maskPosition}
-          transition={{ duration: duration ?? 0.5, ease: "easeOut" }}
+          cx={maskPosition.cx}
+          cy={maskPosition.cy}
+          r="15%"
         >
           <stop offset="0%" stopColor="white" />
           <stop offset="100%" stopColor="black" />
-        </motion.radialGradient>
+        </radialGradient>
         <mask id="textMask">
-          <rect
-            x="0"
-            y="0"
-            width="100%"
-            height="100%"
-            fill="url(#revealMask)"
-          />
+          <rect width="100%" height="100%" fill="url(#revealMask)" />
         </mask>
       </defs>
 
-      {/* Text Layer */}
+      {/* Texte principal */}
       <text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
+        stroke="url(#textGradientLight)"
         strokeWidth="0.3"
-        className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl"
-        style={{ opacity: hovered ? 0.7 : 0 }}
+        mask="url(#textMask)"
+        className="font-[helvetica] font-bold fill-transparent text-7xl dark:stroke-neutral-600"
       >
         {text}
       </text>
-      <motion.text
-        x="50%"
-        y="50%"
-        textAnchor="middle"
-        dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="font-[helvetica] font-bold fill-transparent text-7xl stroke-neutral-200 dark:stroke-neutral-800"
-        initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
-        animate={{
-          strokeDashoffset: 0,
-          strokeDasharray: 1000,
-        }}
-        transition={{
-          duration: 4,
-          ease: "easeInOut",
-        }}
-      >
-        {text}
-      </motion.text>
 
-      {/* Gradient Text with Mask */}
+      {/* Bordures légères en Light Mode */}
       <text
         x="50%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        stroke={`url(${hovered ? "#textGradientLight" : "#textGradientDark"})`}
-        strokeWidth="0.3"
-        mask="url(#textMask)"
-        className="font-[helvetica] font-bold fill-transparent text-7xl"
+        stroke="rgba(0, 0, 0, 0.08)" /* Discret pour le Light Mode */
+        strokeWidth="0.2"
+        className="font-[helvetica] font-bold fill-transparent text-7xl dark:hidden"
+      >
+        {text}
+      </text>
+
+      {/* Bordures légères en Dark Mode */}
+      <text
+        x="50%"
+        y="50%"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        stroke="rgba(255, 255, 255, 0.18)" /* Discret pour le Dark Mode */
+        strokeWidth="0.2"
+        className="font-[helvetica] font-bold fill-transparent text-7xl hidden dark:block"
       >
         {text}
       </text>
