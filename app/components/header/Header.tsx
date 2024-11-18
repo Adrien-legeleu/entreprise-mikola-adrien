@@ -34,7 +34,7 @@ export default function Header() {
             : "bg-transparent"
         }`}
       >
-        <h2 className="flex items-center gap-1 transition-all duration-300 ease-in-out">
+        <h2 className="flex  max-md:hidden items-center gap-1 transition-all duration-300 ease-in-out">
           <Image
             width={100}
             height={100}
