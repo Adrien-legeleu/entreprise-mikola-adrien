@@ -23,7 +23,7 @@ export default function Header() {
     <div className="fixed w-full top-0 left-0 z-50">
       <div
         style={{
-          width: isScrolled ? "70%" : "100%",
+          width: isScrolled ? "75%" : "100%",
           marginTop: isScrolled ? "24px" : "0",
           margin: isScrolled ? "24px auto" : "none",
           transition: "width 0.4s ease-in-out, margin-top 0.4s ease-in-out",
@@ -69,3 +69,17 @@ export default function Header() {
     </div>
   );
 }
+
+const MenuBurger = () => {
+  const [isClick, setIsClick] = useState(false);
+  return (
+    <div>
+      <div onClick={() => setIsClick(!isClick)}>menu</div>
+      <div className="bg-white">
+        <li>dsdds</li>
+        <li>dsdds</li>
+        <li>dsdds</li>
+      </div>
+    </div>
+  );
+};
