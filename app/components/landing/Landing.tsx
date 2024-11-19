@@ -11,7 +11,7 @@ export default function Landing() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, rerum
         illum? Magni iusto vitae fugit aspernatur, quibusdam ipsum sapiente.
       </p>
-      <div className="space-x-4 z-10">
+      <div className="z-10 flex 430:flex-row gap-4 flex-col">
         <Button className="font-semibold text-md">Nous contactez</Button>
         <Button className="font-semibold text-md" variant="outline">
           Nos projets
