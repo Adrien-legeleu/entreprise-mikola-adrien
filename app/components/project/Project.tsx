@@ -11,7 +11,7 @@ export default function Project() {
           Projet
         </span>
       </h2>
-      <ul className="grid xl:grid-cols-3 md:grid-cols-2 px-10  max-w-[1400px] mx-auto max-md:overflow-y-scroll max-md:h-screen  items-center justify-center w-full gap-20">
+      <ul className="grid xl:grid-cols-3 md:grid-cols-2 px-10  max-w-[1500px] mx-auto max-md:overflow-y-scroll max-md:h-screen  items-center justify-center w-full gap-20">
         {projectsData.map((project, idx) => {
           return (
             <li

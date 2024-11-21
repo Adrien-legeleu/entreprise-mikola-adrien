@@ -6,8 +6,8 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="p-10">
-      <div className="h-full w-full py-10 max-sm:hidden flex items-center justify-center">
+    <div className="p-10 max-w-[1500px] mx-auto">
+      <div className="h-full w-full  py-10 max-sm:hidden flex items-center justify-center">
         <TextHoverEffect text="ADREC" />
       </div>
       <div className="md:grid md:grid-cols-40/60 flex flex-col  md:gap-4 gap-8 items-center justify-center">

@@ -51,7 +51,7 @@ export default function Contact() {
     }
   };
   return (
-    <div className="space-y-20 sm:p-20 py-20  430:px-8 px-4">
+    <div className="space-y-20 sm:p-20 py-20  max-w-[1500px] mx-auto 430:px-8 px-4">
       <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
         <span className="inline-block text-indigo-purple dark:text-indigo-light">
           Vous êtes intéressées ?

@@ -36,7 +36,7 @@ const dataFAQ = [
 
 export default function FAQ() {
   return (
-    <div className="w-full sm:px-20 430:px-10 px-6 mx-auto py-20 space-y-20">
+    <div className="w-full max-w-[1500px]  sm:px-20 430:px-10 px-6 mx-auto py-20 space-y-20">
       <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center ">
         <span className="inline-block text-indigo-purple dark:text-indigo-light">
           Des questions ?

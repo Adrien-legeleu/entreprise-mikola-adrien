@@ -22,7 +22,7 @@ export default function Header() {
   }, []);
   return (
     <div>
-      <div className="fixed w-full top-0 hidden lg:flex  left-0 z-50">
+      <div className="fixed w-full top-0 hidden lg:flex  left-1/2 -translate-x-1/2 max-w-[1500px] z-50">
         <div
           style={{
             width: isScrolled ? "75%" : "100%",
@@ -36,7 +36,7 @@ export default function Header() {
               : "bg-transparent"
           }`}
         >
-          <h2 className="flex  items-centerssssss gap-1 transition-all duration-300 ease-in-out">
+          <h2 className="flex  items-center gap-1 transition-all duration-300 ease-in-out">
             <Image
               width={100}
               height={100}

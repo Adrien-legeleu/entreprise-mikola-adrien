@@ -41,8 +41,8 @@ export default function Home() {
       <FAQ />
       <Contact />
       <div className="w-full h-screen overflow-hidden absolute top-0 left-0">
-        <div className=" h-[150vh] md:h-[300vh] w-10 z-0  border-dashed  border-[1px] border-r-black/20   border-l-black/50 absolute top-32 left-0  -translate-y-1/2 -rotate-45" />
-        <div className=" h-[300vh] w-10 z-0 border-dashed  border-[1px] border-l-black/20   border-r-black/50 absolute top-32 left-1/2  -translate-y-1/2 -rotate-45" />
+        <div className=" h-[150vh] md:h-[300vh] w-10 z-0  border-dashed  border-[1px] border-r-black/20 dark:border-r-white/20   border-l-black/50 dark:border-l-white/40   absolute top-32 left-0  -translate-y-1/2 -rotate-45" />
+        <div className=" h-[300vh] w-10 z-0 border-dashed  border-[1px] border-l-black/20 dark:border-l-white/20   dark:border-r-white/40     border-r-black/50 absolute top-32 left-1/2  -translate-y-1/2 -rotate-45" />
       </div>
       {isCursorVisible && (
         <div

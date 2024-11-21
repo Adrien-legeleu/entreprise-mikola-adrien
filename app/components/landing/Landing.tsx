@@ -8,8 +8,9 @@ export default function Landing() {
         Demarquez vous avec Adrec
       </h1>
       <p className="text-sm z-40 max-w-md text-center leading-relaxed tracking-wider text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, rerum
-        illum? Magni iusto vitae fugit aspernatur, quibusdam ipsum sapiente.
+        Chez Adrec, nous optimisons votre présence en ligne pour attirer plus de
+        clients. Grâce à des stratégies SEO sur mesure, nous boostons votre
+        visibilité et vous aidons à dominer votre marché.
       </p>
       <div className="z-10 flex 430:flex-row gap-4 flex-col">
         <Button className="font-semibold text-md">Nous contactez</Button>
