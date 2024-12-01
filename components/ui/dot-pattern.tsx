@@ -1,18 +1,18 @@
 import { useId } from "react";
-
 import { cn } from "@/lib/utils";
 
 interface DotPatternProps {
-  width?: any;
-  height?: any;
-  x?: any;
-  y?: any;
-  cx?: any;
-  cy?: any;
-  cr?: any;
-  className?: string;
-  [key: string]: any;
+  width?: number; // Largeur du motif
+  height?: number; // Hauteur du motif
+  x?: number; // Position x du motif
+  y?: number; // Position y du motif
+  cx?: number; // Coordonnée x du centre du cercle
+  cy?: number; // Coordonnée y du centre du cercle
+  cr?: number; // Rayon du cercle
+  className?: string; // Classes CSS optionnelles
+  [key: string]: string | number | undefined; // Autres props autorisées
 }
+
 export function DotPattern({
   width = 16,
   height = 16,
@@ -31,7 +31,7 @@ export function DotPattern({
       aria-hidden="true"
       className={cn(
         "pointer-events-none absolute inset-0 h-full w-full fill-neutral-400/80",
-        className,
+        className
       )}
       {...props}
     >
