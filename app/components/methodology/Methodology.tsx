@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Button } from "@/components/ui/button";
@@ -50,7 +50,7 @@ const dataMethods = [
   },
 ];
 interface MEthodPagePRops {
-  handleDivMouse: (e: any) => void;
+  handleDivMouse: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
   handleIsMouseNotVisible: () => void;
   handleIsMouseVisible: () => void;
 }

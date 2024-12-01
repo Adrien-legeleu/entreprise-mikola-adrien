@@ -23,8 +23,8 @@ export default function Footer() {
             Adrec
           </h2>
           <i className="text-lg md:text-left text-center text-muted-foreground inline-block">
-            "Adrec, votre partenaire pour des solutions web sur-mesure et
-            innovantes."
+            &ldquo;Adrec, votre partenaire pour des solutions web sur-mesure et
+            innovantes.&ldquo;
           </i>
         </div>
         <div className="sm:grid sm:grid-cols-3 flex flex-col max-sm:gap-5 lg:text-sm  text-xs md:text-left text-center gap-2">

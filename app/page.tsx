@@ -11,15 +11,16 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
 export default function Home() {
-  const [left, setLeft] = useState();
-  const [top, setTop] = useState();
+  const [left, setLeft] = useState<number | undefined>();
+  const [top, setTop] = useState<number | undefined>();
   const [isCursorVisible, setIsCursorVisible] = useState(false);
-  const handleDivMouse = (e: any) => {
+  const handleDivMouse = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     console.log(e.clientX, e.clientY, e);
 
     setLeft(e.clientX);
     setTop(e.clientY);
   };
+
   const handleIsMouseVisible = () => {
     setIsCursorVisible(true);
   };

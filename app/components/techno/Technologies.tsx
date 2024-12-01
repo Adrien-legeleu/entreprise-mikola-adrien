@@ -1,6 +1,5 @@
 import MAquetteImg from "@/public/image/maquette-techno.png";
 import {
-  IconArrowRight,
   IconBrandMysql,
   IconBrandNextjs,
   IconBrandNodejs,
@@ -90,7 +89,9 @@ export default function Technologies() {
       </div>
       <ul className="space-y-1">
         {dataTechno.map((data, idx) => {
-          return <DrawerDemoTechno techno={data} idx={idx} />;
+          return (
+            <DrawerDemoTechno key={`techno-${idx}`} techno={data} idx={idx} />
+          );
         })}
       </ul>
     </div>

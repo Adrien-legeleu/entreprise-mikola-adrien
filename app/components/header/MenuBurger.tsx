@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerFooter,
   DrawerTrigger,
@@ -16,7 +15,7 @@ import Menu from "@/public/menu.png";
 import MenuDark from "@/public/menu (1).png";
 import { useState } from "react";
 
-export const MenuBurger = ({ isScrolled }: { isScrolled: boolean }) => {
+export const MenuBurger = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClose = () => {

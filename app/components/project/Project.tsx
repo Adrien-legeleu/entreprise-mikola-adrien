@@ -1,7 +1,6 @@
 import React from "react";
 import DrawerDemo from "./DrawerModal";
 import { projectsData } from "@/data/projects-data";
-import DotPattern from "@/components/ui/dot-pattern";
 
 export default function Project() {
   return (
