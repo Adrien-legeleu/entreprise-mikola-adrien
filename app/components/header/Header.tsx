@@ -69,7 +69,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <MenuBurger isScrolled={isScrolled} />
+      <MenuBurger />
     </div>
   );
 }

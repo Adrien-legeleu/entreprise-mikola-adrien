@@ -2,15 +2,15 @@ import { useId } from "react";
 import { cn } from "@/lib/utils";
 
 interface DotPatternProps {
-  width?: number; // Largeur du motif
-  height?: number; // Hauteur du motif
-  x?: number; // Position x du motif
-  y?: number; // Position y du motif
-  cx?: number; // Coordonnée x du centre du cercle
-  cy?: number; // Coordonnée y du centre du cercle
-  cr?: number; // Rayon du cercle
-  className?: string; // Classes CSS optionnelles
-  [key: string]: string | number | undefined; // Autres props autorisées
+  width?: number;
+  height?: number;
+  x?: number;
+  y?: number;
+  cx?: number;
+  cy?: number;
+  cr?: number;
+  className?: string;
+  [key: string]: string | number | undefined;
 }
 
 export function DotPattern({
