@@ -1,14 +1,12 @@
 "use client";
 import { useState } from "react";
 import About from "./components/about/About";
-import Header from "./components/header/Header";
 import Landing from "./components/landing/Landing";
 import Methodology from "./components/methodology/Methodology";
 import Project from "./components/project/Project";
 import Technologies from "./components/techno/Technologies";
 import FAQ from "./components/faq/FAQ";
 import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
 
 export default function Home() {
   const [left, setLeft] = useState<number | undefined>();
@@ -29,7 +27,6 @@ export default function Home() {
   };
   return (
     <div className="h-full w-full relative font-montserrat ">
-      <Header />
       <Landing />
       <About />
       <Methodology
@@ -70,7 +67,6 @@ export default function Home() {
           }}
         />
       )}
-      <Footer />
     </div>
   );
 }
