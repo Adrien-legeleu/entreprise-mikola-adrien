@@ -19,7 +19,7 @@ export default function Project() {
         <p className="text-center text-lg px-8 max-w-4xl  leading-relaxed text-gray-700 dark:text-gray-300">
           Parcourez une sélection de projets innovants et créatifs réalisés dans
           divers domaines du développement web. Chaque projet représente une
-          expérience unique en matière de technologie, d'innovation, et de
+          expérience unique en matière de technologie, d&lsquo;innovation, et de
           résolution de défis numériques.
         </p>
       </div>
