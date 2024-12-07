@@ -28,7 +28,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/sendEmail", {
+      const response = await fetch("https://adrec.netlify.app/api/sendEmail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
