@@ -12,21 +12,21 @@ const dataAbout = [
     id: 1,
     title: "Créativité",
     description:
-      "Chez Adrec, chaque projet est unique. Nous créons des sites web innovants et esthétiques, adaptés à l'image de votre marque.",
+      "Chez Adrec, chaque projet est conçu sur mesure. Nous créons des sites web modernes, innovants et en adéquation avec l'identité de votre marque.",
     imgSrc: ImgCreativity,
   },
   {
     id: 2,
     title: "Expertise technique",
     description:
-      "Nos experts maîtrisent les dernières technologies pour vous offrir des sites performants, rapides et optimisés.",
+      "Nos spécialistes maîtrisent les technologies les plus avancées pour vous offrir des sites rapides, performants et parfaitement optimisés.",
     imgSrc: imgExpertise,
   },
   {
     id: 3,
     title: "Satisfaction client",
     description:
-      "Nous écoutons vos besoins et vous accompagnons à chaque étape pour garantir votre succès en ligne.",
+      "Votre réussite est notre priorité. Nous vous accompagnons à chaque étape pour répondre pleinement à vos attentes.",
     imgSrc: imgClient,
   },
 ];
@@ -34,7 +34,7 @@ const dataAbout = [
 export default function About() {
   return (
     <div
-      className="bg-gradient-to-b from-neutral-100  to-white dark:from-neutral-800 dark:to-neutral-950 z-10 relative pb-32"
+      className="bg-gradient-to-b from-neutral-100 to-white dark:from-neutral-800 dark:to-neutral-950 z-10 relative pb-32"
       id="about"
     >
       <div className="max-w-[1500px] mx-auto relative">
@@ -47,36 +47,38 @@ export default function About() {
         >
           <div className="space-y-2">
             <h2 className="md:text-4xl sm:text-3xl text-2xl text-neutral-100 dark:text-neutral-700 text-center font-bold tracking-wide">
-              Nous sommes là pour vous.
+              Nous sommes ici pour vous accompagner
             </h2>
             <p className="text-sm text-neutral-400 dark:text-neutral-500 text-center tracking-wide">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Adrec met son expertise et son savoir-faire au service de votre
+              succès en ligne. Faites de votre projet une réalité avec une
+              stratégie digitale efficace.
             </p>
           </div>
-          <div className="flex md:justify-around md:flex-row flex-col justify-center items-center md:gap-2 gap-10 ">
+          <div className="flex md:justify-around md:flex-row flex-col justify-center items-center md:gap-2 gap-10">
             {dataAbout.map((item) => (
-              <div key={item.id} className="w-[340px] ">
+              <div key={item.id} className="w-[340px]">
                 <div className="flex justify-center">
                   <Image
                     width={1000}
                     height={1000}
-                    alt={`Image la section about de adrec : ${item.title}`}
+                    alt={`Section À propos Adrec : ${item.title}`}
                     src={item.imgSrc}
-                    className=" object-contain w-60 h-52 relative"
+                    className="object-contain w-60 h-52 relative"
                     style={{ top: item.id === 1 ? "10px" : "-5px" }}
                   />
                 </div>
                 <h3 className="lg:text-2xl text-xl text-neutral-100 dark:text-neutral-700 text-center mb-2 font-semibold">
                   {item.title}
                 </h3>
-                <p className="text-neutral-400 dark:text-neutral-500 lg:text-base text-sm  text-center">
+                <p className="text-neutral-400 dark:text-neutral-500 lg:text-base text-sm text-center">
                   {item.description}
                 </p>
               </div>
             ))}
           </div>
           <div className="w-full flex items-center justify-center">
-            <Button variant="destructive">Demander un devis</Button>
+            <Button variant="destructive">Obtenez un devis</Button>
           </div>
         </motion.div>
       </div>

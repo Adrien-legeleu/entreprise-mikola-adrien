@@ -7,43 +7,46 @@ import {
 
 const dataFAQ = [
   {
-    question: "Pourquoi faire appel à une agence de développement web ?",
+    question: "Pourquoi choisir une agence de développement web comme Adrec ?",
     answer:
-      "Travailler avec une agence comme Adrec est essentiel pour concevoir des outils numériques qui dynamisent votre activité. Que vous souhaitiez optimiser vos processus internes, enrichir l’expérience client ou lancer une plateforme innovante, notre expertise assure la création de solutions personnalisées et alignées avec vos objectifs stratégiques.",
+      "Collaborer avec une agence de développement web spécialisée comme Adrec est un choix stratégique pour créer des solutions numériques sur mesure. Notre expertise vous aide à optimiser vos processus internes, enrichir l'expérience utilisateur, et lancer des plateformes innovantes qui correspondent parfaitement à vos objectifs commerciaux.",
   },
   {
     question:
-      "Pourquoi votre application web doit-elle soutenir vos objectifs business ?",
+      "Comment une application web peut-elle renforcer vos objectifs d'entreprise ?",
     answer:
-      "Une application web réalisée par Adrec va bien au-delà d’une simple solution technique ; elle est pensée pour s'intégrer dans votre écosystème. Elle vous aide à capturer de nouvelles opportunités marché et à améliorer l'efficacité opérationnelle, apportant une valeur continue pour vos clients et contribuant à la croissance de votre entreprise.",
+      "Une application web développée par Adrec est bien plus qu'une solution technique. Elle s'intègre dans votre environnement commercial pour vous aider à saisir de nouvelles opportunités, améliorer vos processus internes, et générer de la valeur ajoutée pour vos clients et votre entreprise sur le long terme.",
   },
   {
-    question: "Qu’est-ce qui rend l’approche d’Adrec unique ?",
+    question:
+      "En quoi l'approche d'Adrec se distingue-t-elle des autres agences ?",
     answer:
-      "Chez Adrec, notre approche dépasse le développement de fonctionnalités. Nous identifions les besoins réels de vos utilisateurs pour créer des solutions qui enrichissent leur expérience et aident à atteindre vos objectifs business. Cette démarche centrée utilisateur nous différencie.",
+      "Chez Adrec, notre méthodologie va au-delà du simple développement de fonctionnalités techniques. Nous nous concentrons sur les besoins réels de vos utilisateurs afin de créer des solutions intuitives qui améliorent leur expérience et vous aident à atteindre vos objectifs commerciaux.",
   },
   {
-    question: "Combien de temps faut-il pour développer une application web ?",
+    question:
+      "Combien de temps faut-il pour développer une application web sur mesure ?",
     answer:
-      "Le temps de développement varie en fonction de la complexité et des fonctionnalités de l’application. En général, un projet peut prendre entre quelques semaines pour un MVP (produit minimum viable) et plusieurs mois pour des applications plus complexes. Adrec vous propose un planning réaliste et transparent dès le début du projet.",
+      "La durée du développement d'une application web varie en fonction de la complexité du projet et de ses fonctionnalités. En général, un MVP (produit minimum viable) peut être développé en quelques semaines, tandis que des projets plus avancés nécessitent plusieurs mois. Chez Adrec, nous vous fournissons un calendrier clair et réaliste dès le début de la collaboration.",
   },
   {
-    question: "Comment Adrec garantit-elle la qualité des projets livrés ?",
+    question:
+      "Comment Adrec assure-t-elle la qualité dans ses projets de développement web ?",
     answer:
-      "La qualité est notre priorité chez Adrec. Nous suivons des normes strictes de test et de contrôle qualité, en intégrant des feedbacks clients tout au long du processus. Chaque application passe par des phases de test approfondies pour assurer une performance optimale, une sécurité renforcée et une expérience utilisateur irréprochable.",
+      "La qualité est au cœur de chaque projet chez Adrec. Nous mettons en place des normes strictes de tests, des retours clients continus et une méthodologie éprouvée. Chaque application est soumise à des tests approfondis pour garantir sa performance, sa sécurité, et une expérience utilisateur sans faille.",
   },
 ];
 
 export default function FAQ() {
   return (
-    <div className="w-full max-w-[1500px]  sm:px-20 430:px-10 px-6 mx-auto py-20 space-y-20">
-      <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center ">
+    <div className="w-full max-w-[1500px] sm:px-20 430:px-10 px-6 mx-auto py-20 space-y-20">
+      <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
         <span className="inline-block text-indigo-purple dark:text-indigo-light">
-          Des questions ?
+          Vous avez des questions ?
         </span>
         <br />
         <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] p-3 inline-block rounded-lg -rotate-3 text-neutral-50 dark:text-black">
-          La F.A.Q
+          Notre Foire Aux Questions (FAQ)
         </span>
       </h2>
       <Accordion type="single" collapsible className="w-full space-y-10">

@@ -9,57 +9,58 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 import DrawerDemoTechno from "./DrawerModal";
+
 const dataTechno = [
   {
     title: "Next.js",
-    desc: "SSR et SEO améliorés pour vos applications React.",
+    desc: "Framework JavaScript avec rendu côté serveur et fonctionnalités SEO avancées.",
     descModal:
-      "Next.js est un framework puissant pour React qui simplifie la création d'applications web avec rendu côté serveur (SSR) et optimisation SEO intégrée. Il offre des fonctionnalités avancées comme le routage dynamique et la génération de pages statiques, permettant de créer des sites performants et évolutifs.",
+      "Next.js est un framework performant basé sur React qui facilite le rendu côté serveur (SSR) et l'optimisation SEO. Il intègre des fonctionnalités comme le routage dynamique et la pré-génération de pages pour une meilleure performance.",
     icon: (
       <IconBrandNextjs className="text-indigo-purple dark:text-indigo-light w-full h-full" />
     ),
   },
   {
     title: "Node.js",
-    desc: "Plateforme JavaScript pour le backend.",
+    desc: "Environnement JavaScript pour le développement de serveurs rapides et performants.",
     descModal:
-      "Node.js est un environnement d'exécution qui permet de développer des applications côté serveur avec JavaScript. Il est très performant, capable de gérer de grandes charges, et idéal pour créer des API, des microservices et des applications web temps réel avec une faible latence.",
+      "Node.js est un environnement d'exécution JavaScript optimisé pour la création de serveurs, d'API et d'applications en temps réel avec une latence minimale.",
     icon: (
       <IconBrandNodejs className="text-indigo-purple dark:text-indigo-light w-full h-full" />
     ),
   },
   {
     title: "Tailwind CSS",
-    desc: "Framework CSS utilitaire pour des designs rapides.",
+    desc: "Framework CSS basé sur des classes utilitaires pour un design rapide et réactif.",
     descModal:
-      "Tailwind CSS est un framework qui propose des classes utilitaires prédéfinies pour un développement rapide et flexible de designs modernes. Grâce à sa structure, il permet de personnaliser facilement le style et de garder un code CSS léger et maintenable.",
+      "Tailwind CSS propose une approche de conception basée sur des classes utilitaires. Cette méthode permet de créer des interfaces modernes rapidement tout en conservant un code clair et léger.",
     icon: (
       <IconBrandTailwind className="text-indigo-purple dark:text-indigo-light w-full h-full" />
     ),
   },
   {
     title: "React",
-    desc: "Librairie JavaScript pour interfaces dynamiques.",
+    desc: "Bibliothèque JavaScript pour la création d'interfaces utilisateur dynamiques.",
     descModal:
-      "React est une bibliothèque JavaScript développée par Facebook pour construire des interfaces utilisateurs interactives. Grâce à son architecture basée sur des composants, elle permet de créer des applications dynamiques, maintenables et modulaires, avec une mise à jour efficace des données.",
+      "React est une bibliothèque JavaScript développée par Facebook, utilisée pour concevoir des interfaces utilisateur réactives avec une architecture basée sur des composants réutilisables.",
     icon: (
       <IconBrandReact className="text-indigo-purple dark:text-indigo-light w-full h-full" />
     ),
   },
   {
     title: "MySQL",
-    desc: "Système de gestion de bases de données relationnelles.",
+    desc: "Système de base de données relationnelles rapide et fiable.",
     descModal:
-      "MySQL est un système de gestion de bases de données relationnelles populaire et open-source. Il est largement utilisé pour le stockage et la gestion des données dans les applications web et les systèmes d’information, offrant fiabilité, rapidité et sécurité pour des projets de toute taille.",
+      "MySQL est un SGBD (système de gestion de bases de données) open-source utilisé pour la gestion de données dans des applications web. Il est rapide, fiable et largement adopté dans l'industrie.",
     icon: (
       <IconBrandMysql className="text-indigo-purple dark:text-indigo-light w-full h-full" />
     ),
   },
   {
     title: "TypeScript",
-    desc: "Surcouche de JavaScript pour un code typé.",
+    desc: "Langage JavaScript avec typage statique pour un développement plus sûr.",
     descModal:
-      "TypeScript est un sur-ensemble de JavaScript qui ajoute un typage statique, rendant le code plus sécurisé et maintenable. Il est particulièrement utile pour les grands projets, aidant les développeurs à éviter les erreurs et à structurer le code de manière plus claire et fiable.",
+      "TypeScript est une surcouche de JavaScript qui introduit un typage statique, réduisant ainsi les erreurs et rendant le code plus maintenu, plus lisible et plus sûr.",
     icon: (
       <IconBrandTypescript className="text-indigo-purple dark:text-indigo-light w-full h-full" />
     ),
@@ -68,22 +69,28 @@ const dataTechno = [
 
 export default function Technologies() {
   return (
-    <div className="lg:h-screen h-full max-w-[1500px] mx-auto w-full lg:grid lg:grid-cols-2 flex flex-col  max-lg:items-center lg:gap-32 gap-12 sm:px-16 px-8">
+    <div className="lg:h-screen h-full max-w-[1500px] mx-auto w-full lg:grid lg:grid-cols-2 flex flex-col max-lg:items-center lg:gap-32 gap-12 sm:px-16 px-8 mb-32">
       <div className="space-y-10">
         <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
           <span className="inline-block text-indigo-purple dark:text-indigo-light">
-            Développement web
+            Compétences en développement
           </span>
           <br />
           <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] p-3 inline-block rounded-lg -rotate-3 text-neutral-50 dark:text-black">
-            nos spécialités
+            Technologies maîtrisées
           </span>
         </h2>
+        <p className="text-lg leading-relaxed text-gray-700 dark:text-gray-300 text-center px-4">
+          Découvrez les technologies clés que nous utilisons dans nos projets de
+          développement web. Chaque outil et technologie représente notre
+          expertise en matière de création de solutions modernes, performantes,
+          et scalables.
+        </p>
         <Image
           src={MAquetteImg}
           width={1000}
           height={1000}
-          alt="maquette image adrec"
+          alt="image illustrative des technologies web utilisées"
           className="w-2/3 mx-auto"
         />
       </div>

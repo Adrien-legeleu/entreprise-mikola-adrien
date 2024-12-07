@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     description:
       "Adrec propose des solutions de création de sites web modernes, une stratégie SEO sur mesure et des services de maintenance pour améliorer votre visibilité en ligne.",
     url: "https://adrec.netlify.app/",
-    images: [
-      {
-        url: "https://adrec.netlify.app/logo/logo.png", // URL absolue pour le logo
-        width: 800,
-        height: 800,
-        alt: "Logo Adrec - Agence Création de Sites Web & SEO",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "/logo.png", // URL absolue pour le logo
+    //     width: 800,
+    //     height: 800,
+    //     alt: "Logo Adrec - Agence Création de Sites Web & SEO",
+    //   },
+    // ],
     siteName: "Adrec",
   },
   twitter: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Adrec - Création de Sites Web & Services SEO",
     description:
       "Agence spécialisée dans la création de sites web, l'optimisation SEO et la maintenance pour améliorer votre stratégie digitale.",
-    images: ["https://adrec.netlify.app/logo/logo.png"],
+    // images: ["/logo.png"],
   },
 };
 
@@ -44,11 +44,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link
-          rel="icon"
-          href="https://adrec.netlify.app/logo/logo.png"
-          type="image/x-icon"
-        />
+        <link rel="icon" href="/adrec-logo.png" type="image/png" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
@@ -61,19 +57,19 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <Header />
-        <main>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main>
             {children}
             <ToastContainer />
-          </ThemeProvider>
-        </main>
-        <Footer />
+          </main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
