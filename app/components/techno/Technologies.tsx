@@ -69,14 +69,14 @@ const dataTechno = [
 
 export default function Technologies() {
   return (
-    <div className="lg:h-screen h-full max-w-[1500px] mx-auto w-full lg:grid lg:grid-cols-2 flex flex-col max-lg:items-center lg:gap-32 gap-12 sm:px-16 px-8 mb-32">
+    <div className="lg:h-screen h-full max-w-[1500px] mx-auto w-full lg:grid lg:grid-cols-2 flex flex-col max-lg:items-center lg:gap-32 gap-12 sm:px-16 430:px-8 px-2 mb-32">
       <div className="space-y-10">
-        <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
+        <h2 className="sm:text-4xl text-2xl font-bold tracking-wide space-y-1 text-center">
           <span className="inline-block text-indigo-purple dark:text-indigo-light">
             Compétences en développement
           </span>
           <br />
-          <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] p-3 inline-block rounded-lg -rotate-3 text-neutral-50 dark:text-black">
+          <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] sm:text-4xl text-xl p-3 inline-block rounded-lg -rotate-3 text-neutral-50 dark:text-black">
             Technologies maîtrisées
           </span>
         </h2>

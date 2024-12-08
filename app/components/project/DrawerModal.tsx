@@ -31,7 +31,7 @@ export default function DrawerDemo({ project }: DrawerProps) {
     <Drawer>
       <DrawerTrigger asChild>
         <div
-          className="group h-[200px] aspect-video relative rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/15"
+          className="group h-[160px] 430:h-[200px] aspect-video relative rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/15"
           style={{ backgroundColor: project.color }}
         >
           <div className="absolute top-2 right-2 z-50 flex items-center justify-center">

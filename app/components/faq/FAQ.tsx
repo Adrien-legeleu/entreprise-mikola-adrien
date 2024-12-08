@@ -40,12 +40,12 @@ const dataFAQ = [
 export default function FAQ() {
   return (
     <div className="w-full max-w-[1500px] sm:px-20 430:px-10 px-6 mx-auto py-20 space-y-20">
-      <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
+      <h2 className="sm:text-4xl text-2xl font-bold tracking-wide space-y-1 text-center">
         <span className="inline-block text-indigo-purple dark:text-indigo-light">
           Vous avez des questions ?
         </span>
         <br />
-        <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] p-3 inline-block rounded-lg -rotate-3 text-neutral-50 dark:text-black">
+        <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] sm:text-4xl text-xl p-3 inline-block rounded-lg -rotate-3 text-neutral-50 dark:text-black">
           Notre Foire Aux Questions (FAQ)
         </span>
       </h2>

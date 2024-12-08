@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 export default function Landing() {
   return (
     <BackgroundBeamsWithCollision className="h-screen w-full flex items-center justify-center flex-col gap-6 max-sm:px-4 pt-20">
-      <h1 className="text-center sm:text-7xl 430:text-6xl text-5xl font-bold tracking-wider max-w-3xl text-indigo-purple dark:text-indigo-light z-40">
+      <h1 className="text-center sm:text-7xl 430:text-6xl text-4xl font-bold tracking-wider max-w-3xl text-indigo-purple dark:text-indigo-light z-40">
         Démarquez-Vous avec Adrec
       </h1>
 
-      <p className="text-sm z-40 max-w-2xl px-5 text-center leading-relaxed tracking-wider text-muted-foreground">
+      <p className="sm:text-sm text-xs z-40 max-w-2xl px-2 text-center leading-relaxed tracking-wider text-muted-foreground">
         Adrec vous accompagne dans la création de sites web innovants et
         performants. Que ce soit un site vitrine ou un site e-commerce, nous
         vous aidons à établir une stratégie digitale efficace pour attirer vos

@@ -10,9 +10,9 @@ export default function Project() {
     >
       <div className="absolute pointer-events-none -z-0 inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]" />
       <div className="flex flex-col gap-8 items-center justify-center w-full pb-10">
-        <h2 className="text-4xl z-50 px-10 font-bold space-x-2 text-indigo-purple dark:text-indigo-light text-center">
+        <h2 className="sm:text-4xl text-2xl z-50 px-4 font-bold space-y-1 text-indigo-purple dark:text-indigo-light text-center">
           <span className="inline-block ">Découvrez nos</span>
-          <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] dark:text-black p-3 inline-block rounded-lg rotate-6 text-neutral-50">
+          <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] dark:text-black p-3 sm:text-4xl text-xl inline-block rounded-lg rotate-3 text-neutral-50">
             Projets réalisés
           </span>
         </h2>

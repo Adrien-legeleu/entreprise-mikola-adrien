@@ -54,12 +54,12 @@ export default function Contact() {
   };
   return (
     <div className="space-y-20 sm:p-20 py-20  max-w-[1500px] mx-auto 430:px-8 px-4">
-      <h2 className="sm:text-4xl text-3xl font-bold tracking-wide space-y-1 text-center">
+      <h2 className="sm:text-4xl text-2xl font-bold tracking-wide space-y-1 text-center">
         <span className="inline-block text-indigo-purple dark:text-indigo-light">
           Vous êtes intéressées ?
         </span>
         <br />
-        <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] p-3 inline-block rounded-lg -rotate-3 text-neutral-50 dark:text-black">
+        <span className="bg-[#3F2A78] dark:bg-[#A0AEC0] sm:text-4xl text-xl p-3 inline-block rounded-lg -rotate-3 text-neutral-50 dark:text-black">
           Contactez-nous !
         </span>
       </h2>
