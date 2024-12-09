@@ -46,19 +46,19 @@ export default function DrawerDemoTechno({ techno, idx }: DrawerProps) {
       <DrawerContent>
         <div className=" w-full overflow-y-auto py-5">
           <div className=" max-w-lg mx-auto space-y-8">
-            <DrawerHeader className="flex">
-              <div>
-                <DrawerTitle className="text-3xl font-bold">
+            <DrawerHeader className="flex relative">
+              <div className="space-y-2">
+                <DrawerTitle className="text-3xl flex items-center justify-evenly font-bold">
                   {techno.title}
+                  <div className="sm:w-16 w-10 sm:h-16 h-10">{techno.icon}</div>
                 </DrawerTitle>
-                <DrawerDescription className="text-lg">
+                <DrawerDescription className="text-lg text-center">
                   {techno.desc}
                 </DrawerDescription>
               </div>
-              <div className="w-16 h-16 ">{techno.icon}</div>
             </DrawerHeader>
             <div className="p-4 pb-0 space-y-8">
-              <p className="text-neutral-800 dark:text-neutral-300 leading-relaxed tracking-wide">
+              <p className="text-neutral-800  text-center dark:text-neutral-300 leading-relaxed tracking-wide">
                 {techno.descModal}
               </p>
             </div>

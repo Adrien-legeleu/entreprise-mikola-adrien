@@ -34,7 +34,7 @@ export default function DrawerDemo({ project }: DrawerProps) {
           className="group h-[160px] 430:h-[200px] aspect-video relative rounded-3xl cursor-pointer shadow-xl dark:shadow-2xl shadow-black/30 dark:shadow-neutral-100/15"
           style={{ backgroundColor: project.color }}
         >
-          <div className="absolute top-2 right-2 z-50 flex items-center justify-center">
+          <div className="absolute top-2 right-2 z-40 flex items-center justify-center">
             {project.badge}
           </div>
           <Image
@@ -54,7 +54,7 @@ export default function DrawerDemo({ project }: DrawerProps) {
         </div>
       </DrawerTrigger>
       <DrawerContent>
-        <div className="w-full overflow-y-auto py-5">
+        <div className="w-full overflow-y-auto h-[80vh] py-5">
           <div className="max-w-lg mx-auto space-y-8">
             <DrawerHeader>
               <DrawerTitle className="text-3xl font-bold">
