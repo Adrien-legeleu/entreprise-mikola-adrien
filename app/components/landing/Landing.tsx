@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function Landing() {
   return (
     <BackgroundBeamsWithCollision className="h-screen w-full flex items-center justify-center flex-col gap-6 max-sm:px-4 pt-20">
-      <h1 className="text-center sm:text-7xl 430:text-6xl text-4xl font-bold tracking-wider max-w-3xl text-indigo-purple dark:text-indigo-light z-40">
+      <h1 className="text-center sm:text-5xl 430:text-3xl text-2xl font-bold tracking-wider max-w-3xl text-indigo-purple dark:text-indigo-light z-40">
         Démarquez-Vous avec Adrec
       </h1>
 
