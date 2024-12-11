@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import dynamic from "next/dynamic";
@@ -32,6 +31,7 @@ export const metadata: Metadata = {
     title: "Adrec - Création de Sites Web & Services SEO",
     description:
       "Agence spécialisée dans la création de sites web, l'optimisation SEO et la maintenance pour améliorer votre stratégie digitale.",
+    // images: ["/logo.png"],
   },
 };
 
@@ -43,6 +43,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <link rel="icon" href="/adrec-logo.png" type="image/png" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
@@ -55,7 +56,6 @@ export default function RootLayout({
         >
           <Header />
           <main>{children}</main>
-          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>
