@@ -6,7 +6,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -37,7 +37,12 @@ export default function Contact() {
       });
 
       if (response.ok) {
-        toast.success("Votre message a été envoyé avec succès !");
+        toast("Votre message a été envoyé avec succès !", {
+          action: {
+            label: "Success",
+            onClick: () => console.log("Success"),
+          },
+        });
         setFormData({
           name: "",
           last_name: "",
@@ -46,10 +51,20 @@ export default function Contact() {
           text: "",
         });
       } else {
-        toast.error("Une erreur est survenue, veuillez réessayer.");
+        toast("Une erreur est survenue, veuillez réessayer", {
+          action: {
+            label: "Erreur",
+            onClick: () => console.log("Erreur"),
+          },
+        });
       }
     } catch (error) {
-      toast.error("Erreur d'envoi : " + error);
+      toast("Erreur d'envoi !", {
+        action: {
+          label: "Error",
+          onClick: () => console.log("error" + error),
+        },
+      });
     }
   };
   return (

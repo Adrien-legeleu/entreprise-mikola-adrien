@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("./components/header/Header"));
+const Footer = dynamic(() => import("./components/footer/Footer"));
 
 export const metadata: Metadata = {
   title: "Adrec - Création de Sites Web & Référencement SEO",
@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     title: "Adrec - Création de Sites Web & Services SEO",
     description:
       "Agence spécialisée dans la création de sites web, l'optimisation SEO et la maintenance pour améliorer votre stratégie digitale.",
-    // images: ["/logo.png"],
   },
 };
 
@@ -44,17 +43,8 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="icon" href="/adrec-logo.png" type="image/png" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="description"
-          content="Adrec est une agence spécialisée dans la création de sites web, SEO et maintenance pour améliorer votre stratégie digitale."
-        />
-        <meta
-          name="keywords"
-          content="création site web, SEO, agence web, développement web, maintenance de site internet, stratégie SEO, site vitrine, site e-commerce"
-        />
       </head>
       <body className="antialiased">
         <ThemeProvider
@@ -64,10 +54,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main>
-            {children}
-            <ToastContainer />
-          </main>
+          <main>{children}</main>
+          <Toaster />
           <Footer />
         </ThemeProvider>
       </body>
