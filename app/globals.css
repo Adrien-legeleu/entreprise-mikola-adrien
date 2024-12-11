@@ -19,6 +19,25 @@ html {
   }
 }
 
+/* Personnalisation de la scrollbar */
+::-webkit-scrollbar {
+  width: 9px; /* Définit la largeur de la scrollbar */
+  height: 12px; /* Définit la hauteur pour les scrollbars horizontales */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Couleur du "thumb" (la partie qu'on peut glisser) */
+  border-radius: 10px; /* Rend les coins arrondis */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa; /* Couleur du "thumb" au survol */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Couleur de l'arrière-plan de la scrollbar */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
